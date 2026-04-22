@@ -1,238 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewpoint", content="width=device-width, initial-scale=1.0">
-<title>Responsive CV using HTML & CSS & Javascript</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" type="text/css" href="style.css">
-
-<!-- This is the code for the password -->
-<script>
-	var password = "pass"
-	var response;
-	var entryCount = 0;
-	var entryLimit = 1;
-	var	error = false;
-
-	while(response!= password || error)
-	{
-			if(entryCount<entryLimit)
-			{
-				response = window.prompt("Enter Password");
-				entryCount++;
-			}
-			else
-			{
-				error = true;
-				if(error)
-				{
-					alert("Try Different password");
-					entryCount = 0;
-					error = false
-				}
-			}
-	}
-</script>
-
-<!-- This is the code for the resume -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Villarama | Resume</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-	<div class="container">
-		<div class="left_Side">
-			<div class="profileText">
-				<div class="imgBx">
-					<img src="img.jpg">	
-				</div>
-				<h2>Obama<br><span>President</span></h2>
-			</div>
+<div class="container">
 
-			<div class="contactInfo">
-				<h3 class="title">Contact Info</h3>
-				<ul>
-					<li>
-						<span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
-						<span class="text">+65 12345678</span>
-					</li>
-					<li>
-						<span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i>
-						</span>
-						<span class="text">Joseph_123@gmail.com</span>
-					</li>
-					<li>
-						<span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
-						<!-- <span class="text">www.website.com</span> -->
-						<button onclick="gotoLink(this)" value="https://www.google.com/">www.google.com</button>
-						<script>
-						function gotoLink(link)
-						{
-								console.log(link.value);
-								window.open(link.value);
-						};
-						</script>
-					</li>
-					<li>
-						<span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
-						<!-- <span class="text">www.Linkedin.com</span> -->
-						<button onclick="gotoLink(this)" value="https://www.linkedin.com/in/joseph-christian-villarama/">www.Linkedin.com</button>
-						<script>
-						function gotoLink(link)
-						{
-								console.log(link.value);
-								window.open(link.value);
-						};
-						</script>
-					</li>
-					<li>
-						<span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-						<span class="text">Changi Business Park,Singapore</span>
-					</li>
-				</ul>
-			</div>
+    <!-- LEFT SIDE -->
+    <div class="left">
+        <img src="img.jpg" class="profile-img">
 
+        <h1>Joseph Villarama</h1>
+        <p class="role">Trader / Analyst</p>
 
+        <div class="section">
+            <h2>Contact</h2>
+            <p>📞 +65 1234 5678</p>
+            <p>📧 joseph@email.com</p>
+            <p>📍 Singapore</p>
+        </div>
 
-			<div class="contactInfo Education">
-				<h3 class="title">Education</h3>
-				<ul>
-					<li>
-						<h5>2010 - 2013</h5>
-						<h4>Master Degree in Computer Science</h4>
-						<h4>University Name</h4>
-					</li>
-					<li>
-						<h5>2007 - 2010</h5>
-						<h4>Diploma in Computer Science</h4>
-						<h4>University Name</h4>
-					</li>
-					<li>
-						<h5>1998 - 2007</h5>
-						<h4>Matriculation</h4>
-						<h4>University Name</h4>
-					</li>
-				</ul>
-			</div>
+        <div class="section">
+            <h2>Links</h2>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
 
-			<div class="contactInfo Languages">
-				<h3 class="title">Languages</h3>
-				<ul>
-					<li>
-						<span class="text">English</span>
-						<span class="percent">
-							<div style="width: 80%;"></div>
-						</span>
-					</li>
-					<li>
-						<span class="text">Tagalog</span>
-						<span class="percent">
-							<div style="width: 90%;"></div>
-						</span>
-					</li>
-					<li>
-						<span class="text">Spanish</span>
-						<span class="percent">
-							<div style="width: 50%;"></div>
-						</span>
-					</li>
-				</ul>
-			</div>	
-		</div>
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Trading (Swing / Intraday)</li>
+                <li>Technical Analysis</li>
+                <li>Python / Pine Script</li>
+                <li>Excel Automation</li>
+            </ul>
+        </div>
+    </div>
 
-		<div class="right_Side">
-			<div class="about">
-				<h2 class="title2">Profile</h2>
-				<p>Profile description<br><br>More details</p>
-			</div>
-			<div class="about">
-				<h2 class="title2">Experience</h2>
-				<div class="box">
-					<div class="year_company">
-						<h5>2019 - Present</h5>
-						<h5>CitiBank</h5>
-					</div>
-					<div class="text">
-						<h4>Senior UX Designer</h4>
-						<p>Add brief description here</p>
-					</div>
-				</div>
+    <!-- RIGHT SIDE -->
+    <div class="right">
 
+        <div class="section">
+            <h2>Profile</h2>
+            <p>
+                Trader focused on systematic strategies, risk management, and data-driven decision making.
+                Experienced in building TradingView strategies and optimizing execution.
+            </p>
+        </div>
 
-				<div class="box">
-					<div class="year_company">
-						<h5>2016 - 2019</h5>
-						<h5>Wipro</h5>
-					</div>
-					<div class="text">
-						<h4>UI/UX Designer</h4>
-						<p>Add brief description here</p>
-					</div>
-				</div>
+        <div class="section">
+            <h2>Experience</h2>
 
+            <div class="job">
+                <h3>Independent Trader</h3>
+                <span>2022 – Present</span>
+                <p>Developed systematic trading strategies and managed portfolio risk.</p>
+            </div>
 
-				<div class="box">
-					<div class="year_company">
-						<h5>2010 - 2016</h5>
-						<h5>BPI</h5>
-					</div>
-					<div class="text">
-						<h4>Banker</h4>
-						<p>Add brief description here</p>
-					</div>
-				</div>
-			</div>
+            <div class="job">
+                <h3>Finance / Banking Role</h3>
+                <span>Previous</span>
+                <p>Handled financial operations and client portfolios.</p>
+            </div>
+        </div>
 
-			<div class="about skills">
-				<h2 class="title2">Professional Skills</h2>
-				<div class="box">
-					<h4>HTML</h4>
-					<div class="percent">
-						<div style="width: 95%;"></div>
-					</div>
-				</div>
+        <div class="section">
+            <h2>Education</h2>
+            <p>Diploma / Degree (Your actual details here)</p>
+        </div>
 
-				<div class="box">
-					<h4>CSS</h4>
-					<div class="percent">
-						<div style="width: 85%;"></div>
-					</div>
-				</div>
-				<div class="box">
-					<h4>Photoshop</h4>
-					<div class="percent">
-						<div style="width: 95%;"></div>
-					</div>
-				</div>
-				<div class="box">
-					<h4>Javascript</h4>
-					<div class="percent">
-						<div style="width: 75%;"></div>
-					</div>
-				</div>
-				<div class="box">
-					<h4>Illustrator</h4>
-					<div class="percent">
-						<div style="width: 80%;"></div>
-					</div>
-				</div>
+        <div class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li>TradingView AMD Strategy</li>
+                <li>Portfolio Tracker</li>
+            </ul>
+        </div>
 
-				<div class="box">
-					<h4>Adobe</h4>
-					<div class="percent">
-						<div style="width: 65%;"></div>
-					</div>
-				</div>
-			</div>
-
-			<div class="about Interests">
-				<h2 class="title2">Interests</h2>
-				<ul>
-					<li><i class="fa fa-futbol-o" aria-hidden="true"></i> Basketball</li>
-					<li><i class="fa fa-plane" aria-hidden="true"></i> Traveling</li>
-					<li><i class="fa fa-book" aria-hidden="true"></i> Reading</li>
-					<li><i class="fa fa-cutlery" aria-hidden="true"></i> Cooking</li>
-				</ul>
-			</div>
-
-		</div>	
-	</div>	
+    </div>
+</div>
 </body>
 </html>
